@@ -1,0 +1,808 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Technical Documentation Page | freecodecamp</title>
+    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap">
+</head>
+
+<body>
+    <div class="content">
+        <div class="menu-btn" onclick="openMenu()">
+                <span class="top line"></span>
+                <span class="middle line"></span>
+                <span class="bottom line"></span>
+        </div>
+        
+        <nav id="navbar">    
+            <header>
+                <div id="logo">
+                    <h1><span class="white">My</span><br><span class="orange">practices</span></h1>
+                </div>
+            </header>
+            
+            <ul>
+                <li><a href="#animated_preloader" class="nav-link">Animated Preloader</a></li>
+                <li><a href="#animated_ui_section" class="nav-link">Animated UI Section</a></li>
+                <li><a href="#funcky_preloader" class="nav-link">Funcky Preloader</a></li>
+                <li><a href="#animated_social_icons" class="nav-link">Animated Social Icons</a></li>
+                <li><a href="#button_hover_effects" class="nav-link">Button hover effects</a></li>
+            </ul>
+            
+            
+        </nav>
+        
+        <main id="main-doc">
+            
+            <!-- section 1 begin -->
+            <section class="main-section" id="animated_preloader">
+                <header class="section-heading">
+                    <h2>Animated Preloader</h2>
+                </header>
+                <p><a href="https://codepen.io/shu217/pen/VwYpOyj" class="pen-link">https://codepen.io/shu217/pen/VwYpOyj</a></p>
+                
+                
+                <article>
+                    <p>A webpage with high quality of images takes some time to load and makes web pages ready for complete process. A preloader prevents the user to click on any content before the loading has finished.</p>
+                    <p>When page is ready, preloader automatically gets hide and thus user can continue..</p>
+                    
+                    <h3 class="lang-heading">html</h3>
+                    <pre><code>&lt;body>
+  &lt;div class="loader">
+    &lt;div class="content">
+      &lt;div class="circle">&lt;/div>
+      &lt;div class="circle">&lt;/div>
+      &lt;div class="circle">&lt;/div>
+      &lt;div class="circle">&lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/body></code></pre>
+                    
+                    <h3 class="lang-heading">css</h3>
+                    
+                    <pre><code>*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader
+{
+  width: 100vw;
+  height: 100vh;
+  background:#f1c40f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content
+{
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  animation: animate-content 4s linear infinite;
+}
+
+.circle
+{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.circle:nth-child(1)
+{
+  background: #e74c3c;
+  animation: animate1 0.5s ease-in infinite alternate;
+}
+
+.circle:nth-child(2)
+{
+  background: #27ae60;
+  animation: animate2 0.5s ease-in infinite alternate;
+}
+
+.circle:nth-child(3)
+{
+  background: #8e44ad;
+  animation: animate3 0.5s ease-in infinite alternate;
+}
+
+.circle:nth-child(4)
+{
+  background: #2980b9;
+  animation: animate4 0.5s ease-in infinite alternate;
+}
+
+p
+{
+  position: absolute;
+  bottom: 10vh;
+  font-family:sans-serif;
+  text-transform: uppercase;
+  color: #2c3e50;
+}
+
+a
+{
+  text-decoration: underlined;
+  font-weight: bold;
+  color: #16a085;
+}
+
+
+/******** KEYFRAMES    **********/
+
+@keyframes animate1
+{
+  0% {transform: translate(0);}
+  100% {transform: translate(-5vmin,-5vmin);}
+}
+
+@keyframes animate2
+{
+  0% {transform: translate(0);}
+  100% {transform: translate(5vmin,-5vmin);}
+}
+
+@keyframes animate3
+{
+  0% {transform: translate(0);}
+  100% {transform: translate(-5vmin,5vmin);}
+}
+
+@keyframes animate4
+{
+  0% {transform: translate(0);}
+  100% {transform: translate(5vmin,5vmin);}
+}
+
+@keyframes animate-content
+{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(90deg);}
+  50%{transform: rotate(180deg);}
+  75%{transform: rotate(270deg);}
+  100%{transform: rotate(360deg);}
+}</code></pre>
+                    
+                </article>
+                
+            </section>
+            
+            <!-- section 1 end -->
+            
+            
+           <!-- section 2 begin --> 
+            
+            <section class="main-section" id="animated_ui_section">
+                <header class="section-heading">
+                    <h2>Animated UI Section</h2>
+                </header>
+                    <p><a href="https://codepen.io/shu217/pen/OJPmNGQ?editors=1100" class="pen-link">https://codepen.io/shu217/pen/OJPmNGQ?editors=1100</a></p>
+                
+                <article>
+                    <p>Animated section is used to show contents of message or any type of article on any subject.</p>
+                    
+                    <h3 class="lang-heading">html</h3>
+                    
+                    <pre><code>&lt;body>
+  &lt;div id="frame">
+    
+    &lt;div id="left-section">
+      &lt;h3 class="name">John Doe&lt;/h3>
+      &lt;h5 class="heading">About&lt;/h5>
+      &lt;p class="text">Some text&lt;/p>
+      &lt;h5 class="heading">Message&lt;/h5>
+      &lt;p class="text">Some text&lt;/p>
+    &lt;/div>
+    
+    &lt;div id="left-profile">
+      &lt;span class="fa fa-arrow-left" id="left-arrow" onclick="closeLeft()">&lt;/span>
+      
+      &lt;div class="wrapper" id="left-wrapper">
+        &lt;img src="image_link" alt="" class="image" onclick="openLeft()" id="left-image">
+        &lt;h2 class="name" id="left-name">John Doe&lt;/h2>
+        &lt;p class="subtitle" id="left-subtitle">Web Designer&lt;/p>
+      &lt;/div>
+    &lt;/div>
+    
+    &lt;div id="right-profile">
+      &lt;span class="fa fa-arrow-right" id="right-arrow" onclick="closeRight()">&lt;/span>
+      
+      &lt;div class="wrapper" id="right-wrapper">
+        &lt;img src="image_link" alt="" class="image" onclick="openRight()" id="right-image">
+        &lt;h2 class="name" id="right-name">Polly Sam&lt;/h2>
+        &lt;p class="subtitle" id="right-subtitle">Programmer&lt;/p>
+      &lt;/div>
+    &lt;/div>
+    
+    &lt;div id="right-section">
+      &lt;h3 class="name">Polly Sam&lt;/h3>
+      &lt;h5 class="heading">About&lt;/h5>
+      &lt;p class="text">Some text&lt;/p>
+      
+      &lt;h5 class="heading">Message&lt;/h5>
+      &lt;p class="text">Some text&lt;/p>
+    &lt;/div>
+    
+    
+  &lt;/div>
+&lt;/body></code></pre>
+                    
+                    <h3 class="lang-heading">css</h3>
+                    
+                    <pre><code>*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing:  border-box;
+}
+
+body
+{
+  font-family: 'lato',sans-serif;
+}
+
+#frame
+{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#left-section,#right-section
+{
+  min-width: 70vw;
+  background: #143642;
+  padding: 8vmin 5vmin;
+  color: #DAD2D8;
+  transition: all 0.5s ease-in;
+}
+
+#left-section
+{
+  margin-left: -70vw;
+}
+
+#right-section
+{
+  margin-right: -70vw;
+}
+
+#left-section .name,#right-section .name
+{
+  padding: 1vmin 0;
+  border-bottom: 1px solid #646165;
+}
+
+.heading
+{
+  font-size: 3vmin;
+  padding: 1vmin 4vmin;
+  margin: 2vmin 0;
+  border-left: 2px solid #646165;
+  color: #646165;
+}
+
+.text
+{
+  text-align: justify;
+  font-size: 2.8vmin;
+}
+
+#left-profile,#right-profile
+{
+  min-width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in;
+  position: relative;
+}
+
+#left-profile
+{
+  background: #0FA3B1;
+}
+
+#right-profile
+{
+  background: #DAD2D8;
+}
+
+.fa
+{
+  position: absolute;
+  background: #424C55;
+  padding: 2vmin;
+  border-radius: 50%;
+  color: #DAD2D8;
+  cursor: pointer;
+  z-index: -1;
+  transition: all 0.5s ease-in;
+}
+
+.wrapper
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #143642;
+  transition: all 0.5s ease-in;
+}
+
+.image
+{
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  border: 1.5vmin solid #fff;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.name
+{
+  margin-top : 1.5vmin;
+  font-size: 5vmin;
+  transition: all 0.5s ease-in;
+}
+
+.subtitle
+{
+  transition: all 0.5s ease-in;
+}
+</code></pre>
+                </article>
+                
+            </section>
+            
+            <!-- section 2 end -->
+            
+            
+            <!-- section 3 begin -->
+            
+            <section class="main-section" id="funcky_preloader">
+                <header class="section-heading">
+                    <h2>Funcky Preloader</h2>
+                </header>
+                    <p><a href="https://codepen.io/shu217/pen/dyPRKzx" class="pen-link">https://codepen.io/shu217/pen/dyPRKzx</a></p>
+                
+                <article>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto sit nemo corrupti quasi, provident neque consequuntur sed lib</p>
+                    
+                    <h3 class="lang-heading">html</h3>
+                    
+                    <pre><code>&lt;body>
+  &lt;div class="container">
+    &lt;div class="circle">&lt;/div>
+    &lt;div class="circle">&lt;/div>
+    &lt;div class="circle">&lt;/div>
+    &lt;div class="circle">&lt;/div>
+    &lt;div class="circle">&lt;/div>
+    &lt;div class="circle">&lt;/div>
+  &lt;/div>
+  &lt;p id="text">Loading&lt;/p>
+&lt;/body></code></pre>
+                    
+                    <h3 class="lang-heading">css</h3>
+                    
+                    <pre><code>*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body
+{
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e9e4f0,#d3cce3); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:'roboto',sans-serif;
+}
+
+.container
+{
+  width: 50vmin;
+  height: 10vmin;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.circle
+{
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  position: absolute;
+  animation: animate 2s ease-in-out infinite alternate;
+}
+
+@keyframes animate
+{
+  100%
+  {
+    transform: translateX(45vmin);
+  }
+}
+
+.circle:nth-child(1)
+{
+  background:#f39c12;
+  animation-delay: 810ms;
+}
+
+.circle:nth-child(2)
+{
+  background:#2980b9;
+  animation-delay: 675ms;
+}
+
+.circle:nth-child(3)
+{
+  background:#27ae60;
+  animation-delay: 540ms;
+}
+
+.circle:nth-child(4)
+{
+  background:#8e44ad;
+  animation-delay: 405ms;
+}
+
+.circle:nth-child(5)
+{
+  background:#e74c3c;
+  animation-delay: 270ms;
+}
+
+.circle:nth-child(6)
+{
+  background:#16a085;
+  animation-delay: 135ms;
+}
+
+#text
+{
+  font-size: 4vmin;
+  font-weight: bold;
+  color:#2d98da;
+  margin: 1vmin 0;
+}
+
+.info
+{
+  text-transform: uppercase;
+  font-size: 1.5;
+  font-weight: bold;
+  color: #fff;
+  padding: 3vmin 4vmin;
+  position:absolute;
+  bottom: 0;
+  background: #3867d6;
+  border-radius: 1.5vmin 1.5vmin 0 0;
+}
+
+.info a
+{
+  color: #fed330;
+}</code></pre>
+                </article>
+                
+            </section>
+            
+            <!-- section 3 end -->
+       
+            
+            <!-- section 4 begin -->
+            
+            <section class="main-section" id="animated_social_icons">
+                <header class="section-heading">
+                    <h2>Animated Social Icons</h2>
+                </header>
+                    <p><a href="https://codepen.io/shu217/pen/xxbyNGP" class="pen-link">https://codepen.io/shu217/pen/xxbyNGP</a></p>
+                
+                <article>
+                    <p>Social icons are used for directly moving on social media sites. using this a user can see the company's social acitivities and his works.</p>
+                    
+                    <p>
+                        Here i have given four most famous and valuable social media icons for programmers, are..
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Linkedin</li>
+                            <li>Github</li>
+                            <li>Codepen</li>
+                        </ul>
+                    </p>
+                    
+                    <h3 class="lang-heading">html</h3>
+                    
+                    <pre><code>&lt;body>
+   &lt;div class="share-btn">
+      &lt;a href="#">
+         &lt;span class="fa fa-facebook">&lt;/span>
+      &lt;/a>
+
+      &lt;a href="#">
+         &lt;span class="fa fa-linkedin">&lt;/span>
+      &lt;/a>
+
+      &lt;a href="#">
+         &lt;span class="fa fa-codepen">&lt;/span>
+      &lt;/a>
+
+      &lt;a href="#">
+         &lt;span class="fa fa-github">&lt;/span>
+      &lt;/a>
+
+      &lt;div class="cover">
+         &lt;p>Share&lt;/p>
+      &lt;/div>
+   &lt;/div>
+&lt;/body></code></pre>
+                    
+                    <h3 class="lang-heading">css</h3>
+                    
+                    <pre><code>*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body
+{
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(to bottom,#FFC312,#F79F1F);
+}
+
+.share-btn
+{
+   width: 200px;
+   height: 50px;
+/*    border: 2px solid #EA2027; */
+   border-radius: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   cursor: pointer;
+   overflow: hidden;
+   background: #fff;
+}
+
+.share-btn:hover .cover
+{
+   transform: translateX(-100%);
+}
+
+.share-btn:hover a
+{
+   transform: scale(1);
+}
+
+.share-btn a
+{
+   text-decoration: none;
+   font-size: 18px;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   margin: 0 2px;
+   text-align: center;
+   line-height: 40px;
+/*    color: #0652DD; */
+   color: #000;
+   transition: 0.3s ease-out;
+   transform: scale(0.2);
+}
+
+.share-btn a:hover
+{
+   background: #EA2027;
+   color: #fff;
+}
+
+.cover
+{
+   width: 100%;
+   height: 100%;
+   border-radius: 40px;
+   background: #EA2027;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: 0.5s ease;
+}
+
+.cover p
+{
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 15px;
+   font-family: 'roboto',sans-serif;
+   text-align: center;
+   letter-spacing: 2px;
+   line-height: 50px;
+}
+
+.msg
+{
+   position: absolute;
+   bottom: 50px;
+   font-size: 22px;
+   color: #000;
+   font-family: sans-serif;
+   color: #222;
+}
+</code></pre>
+                </article>
+                
+            </section>
+            
+            <!-- section 4 end -->
+            
+            <!-- section 5 begin -->
+            <section class="main-section" id="button_hover_effects">
+                <header class="section-heading">
+                    <h2>Button Hover Effects</h2>
+                </header>
+                    <p><a href="https://codepen.io/shu217/pen/YzPrzVq?editors=1000" class="pen-link">https://codepen.io/shu217/pen/YzPrzVq?editors=1000</a></p>
+                
+                <article>
+                    <p>Html default buttons are simple. to make the buttons impressive we can use the 'css'. here is the some examples..</p>
+                    <p>
+                        Here i have created Four buttons for four direction effects individually.
+                        <ul>
+                            <li>from top</li>
+                            <li>from right</li>
+                            <li>from bottom</li>
+                            <li>from left</li>
+                        </ul>
+                    </p>
+                    
+                    <h3 class="lang-heading">html</h3>
+                    
+                    <pre><code>&lt;body>
+  &lt;div class="container">
+    &lt;button id="from-top">Hover me&lt;span>&lt;/span>&lt;/button>
+    &lt;button id="from-right">Hover me&lt;span>&lt;/span>&lt;/button>
+    &lt;button id="from-bottom">Hover me&lt;span>&lt;/span>&lt;/button>
+    &lt;button id="from-left">Hover me&lt;span>&lt;/span>&lt;/button>
+  &lt;/div>
+&lt;/body></code></pre>
+                    
+                    <h3 class="lang-heading">css</h3>
+                    
+                    <pre><code>:root
+{
+   --c: goldenrod;
+}
+
+body
+{
+   min-height: 100vh;
+   background: #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container
+{
+   box-sizing: content-box;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+button
+{
+   width: 40vmin;
+   height: 9vmin;
+   border: 0.5vmin solid var(--c);
+   margin: 4vmin;
+   background: #000;
+   color: var(--c);
+   font-size: 3vmin;
+   text-transform: uppercase;
+   letter-spacing: 0.4px;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   transition: 0.3s ease-in;
+   outline: none;
+}
+
+button:hover
+{
+   color: #000;
+}
+
+button span
+{
+   width: 100%;
+   height: 100%;
+   background: var(--c);
+   position: absolute;
+   z-index: -1;
+   transition: 0.5s ease-in;
+}
+
+#from-top span
+{
+   top: -100%;
+   left: 0;
+}
+
+#from-top:hover span
+{
+   top: 0;
+}
+
+#from-bottom span
+{
+   left: 0;
+   bottom: -100%;
+}
+
+#from-bottom:hover span
+{
+   bottom: 0;
+}
+
+#from-left span
+{
+   left: -100%;
+   top: 0;
+}
+
+#from-left:hover span
+{
+   left: 0;
+}
+
+#from-right span
+{
+   right: -100%;
+   top: 0;
+}
+
+#from-right:hover span
+{
+   right: 0;
+   top: 0;
+}</code></pre>
+                </article>
+                
+            </section>
+            
+            <!-- section 5 end -->
+                                  
+            
+        </main>
+    </div>
+</body>
+</html>
